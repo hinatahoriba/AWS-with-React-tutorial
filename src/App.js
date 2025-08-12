@@ -1,13 +1,19 @@
-import logo from './logo.svg';
+import {useState } from "react"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Hello React app with AWS</h2>
-      </header>
+    <div>
+      <h1>ログインフォーム</h1>
+      <form>
+        <label for="name">名前</label>
+        <input id="name" type="text" name="name" placeholder='名前を入力してください' />
+        <br />
+        <label for="password">パスワード</label>
+        <input id="password" type="text" name="password" placeholder='パスワードを入力してください' />
+        <br />
+        <button>ログイン</button>
+      </form>
     </div>
   );
 }
