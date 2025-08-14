@@ -1,19 +1,17 @@
-import {useState } from "react"
+import { useState } from "react";
+import Title from "./component/Title";
+import Form from "./component/Form";
+import List from "./component/List"
 import './App.css';
 
 function App() {
+  const [taskList, setTaskList] = useState([]);
+
   return (
-    <div>
-      <h1>ログインフォーム</h1>
-      <form>
-        <label for="name">名前</label>
-        <input id="name" type="text" name="name" placeholder='名前を入力してください' />
-        <br />
-        <label for="password">パスワード</label>
-        <input id="password" type="text" name="password" placeholder='パスワードを入力してください' />
-        <br />
-        <button>ログイン</button>
-      </form>
+    <div className = "body">
+      <Title />
+      <Form taskList = {taskList} setTaskList = {setTaskList}/>
+      <List taskList = {taskList} setTaskList = {setTaskList}/>
     </div>
   );
 }
